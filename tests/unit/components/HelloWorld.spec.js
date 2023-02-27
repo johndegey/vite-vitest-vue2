@@ -1,14 +1,14 @@
-import {mount} from '@vue/test-utils';
+import {render, screen} from '@testing-library/vue';
 import HelloWorld from '@/components/HelloWorld.vue';
 
 describe('HelloWorld Test Suite', () => {
   it('should render the component', () => {
-    const wrapper = mount(HelloWorld, {
-      propsData: {
+    render(HelloWorld, {
+      props: {
         msg: 'Hello Vitest',
       },
     });
-    expect(wrapper.text()).toContain('Hello Vitest');
+    expect(screen.getByText('Hello Vitest')).toBeInTheDocument();
   });
 
   it.todo('do not forget this one', () => {});
@@ -18,11 +18,11 @@ describe('HelloWorld Test Suite', () => {
     ${'Hello You'}
     ${'Hello Me'}
   `('should contain $text', ({text}) => {
-    const wrapper = mount(HelloWorld, {
-      propsData: {
+    render(HelloWorld, {
+      props: {
         msg: text,
       },
     });
-    expect(wrapper.text()).toContain(text);
+    expect(screen.getByText(text)).toBeInTheDocument();
   });
 });

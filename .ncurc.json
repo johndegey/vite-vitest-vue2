@@ -1,6 +1,7 @@
 {
   "reject": [
     "vue",
-    "@vue/test-utils"
+    "@vue/test-utils",
+    "@testing-library/vue"
   ]
 }

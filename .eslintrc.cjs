@@ -13,7 +13,10 @@ module.exports = {
   overrides: [
     {
       files: ['tests/*.{j,t}s?(x)', 'tests/**/*.spec.{j,t}s?(x)'],
-      extends: ['plugin:vitest-globals/recommended'],
+      extends: [
+        'plugin:testing-library/vue',
+        'plugin:vitest-globals/recommended',
+      ],
       env: {'vitest-globals/env': true},
     },
   ],
