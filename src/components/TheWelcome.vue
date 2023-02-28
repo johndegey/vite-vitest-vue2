@@ -2,7 +2,7 @@
   <div>
     <WelcomeItem data-testid="welcome-documentation">
       <template #icon>
-        <DocumentationIcon />
+        <IconDocumentation />
       </template>
       <template #heading>
         Documentation
@@ -19,7 +19,7 @@
 
     <WelcomeItem data-testid="welcome-tooling">
       <template #icon>
-        <ToolingIcon />
+        <IconTooling />
       </template>
       <template #heading>
         Tooling
@@ -60,7 +60,7 @@
 
     <WelcomeItem data-testid="welcome-ecosystem">
       <template #icon>
-        <EcosystemIcon />
+        <IconEcosystem />
       </template>
       <template #heading>
         Ecosystem
@@ -98,7 +98,7 @@
 
     <WelcomeItem>
       <template #icon>
-        <CommunityIcon />
+        <IconCommunity />
       </template>
       <template #heading>
         Community
@@ -132,7 +132,7 @@
 
     <WelcomeItem>
       <template #icon>
-        <SupportIcon />
+        <IconSupport />
       </template>
       <template #heading>
         Support Vue
