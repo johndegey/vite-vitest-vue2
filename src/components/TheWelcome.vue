@@ -1,6 +1,9 @@
 <template>
   <div>
-    <WelcomeItem data-testid="welcome-documentation">
+    <WelcomeItem
+      data-testid="welcome-documentation"
+      :show-attribute-in-stub="true"
+    >
       <template #icon>
         <IconDocumentation />
       </template>
@@ -17,7 +20,10 @@
       provides you with all information you need to get started.
     </WelcomeItem>
 
-    <WelcomeItem data-testid="welcome-tooling">
+    <WelcomeItem
+      data-testid="welcome-tooling"
+      :show-attribute-in-stub="false"
+    >
       <template #icon>
         <IconTooling />
       </template>

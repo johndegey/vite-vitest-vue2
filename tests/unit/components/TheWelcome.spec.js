@@ -24,4 +24,30 @@ describe('TheWelcome Test Suite', () => {
       expect(screen.getByTestId('welcome-ecosystem')).toBeInTheDocument();
     },
   );
+
+  it('should validate the attribute, works with value \'false\'', () => {
+    render(TheWelcome, {
+      stubs: {
+        WelcomeItem: true,
+      },
+    });
+    expect(screen.getByTestId('welcome-documentation')).toBeInTheDocument();
+    expect(screen.getByTestId('welcome-documentation'))
+      .toHaveAttribute('show-attribute-in-stub', 'true');
+    screen.debug();
+  });
+
+  it('should validate the attribute, does not work with value \'false\'',
+    () => {
+      render(TheWelcome, {
+        stubs: {
+          WelcomeItem: true,
+        },
+      });
+      expect(screen.getByTestId('welcome-tooling')).toBeInTheDocument();
+      expect(screen.getByTestId('welcome-tooling'))
+        .toHaveAttribute('show-attribute-in-stub', 'false');
+      screen.debug();
+    },
+  );
 });
